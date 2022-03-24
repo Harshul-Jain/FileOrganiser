@@ -1,6 +1,12 @@
-// console.log("Hello world");
-let inputArr = process.argv;
-console.log(inputArr);
-//['pathToNode' , 'pathToFile' , 'input_passed_in_terminal']
-let input =inputArr[2];
-console.log(input);
+let fs = require('fs');
+let folderPath = process.argv[2];
+
+let folderExists = fs.existsSync(folderPath);
+
+"C:\\Users\\hp\\Desktop\\FJP_Web\\Projects\\FileOrganizer\\Download"
+if(folderExists){
+    console.log("Present");
+}
+else{
+    console.log("Please enter correct path");
+}
